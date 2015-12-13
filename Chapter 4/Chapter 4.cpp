@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "boundingvolumes.h"
+#include "bounding_volumes.h"
 #include <armadillo>
 
 using namespace arma;

@@ -24,7 +24,10 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="closestpointcomputations.h">
+    <ClInclude Include="dynamic_intersection_tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="closest_point_computations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +38,10 @@
     <ClCompile Include="Chapter 5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="closestpointcomputations.cpp">
+    <ClCompile Include="closest_point_computations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamic_intersection_tests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

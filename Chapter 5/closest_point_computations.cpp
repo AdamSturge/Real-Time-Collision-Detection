@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <armadillo>
-#include "closestpointcomputations.h"
+#include "closest_point_computations.h"
 
 using namespace arma;
 

@@ -3,14 +3,17 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include "closestpointcomputations.h"
+#include "closest_point_computations.h"
+#include "dynamic_intersection_tests.h"
 #include <armadillo>
 
 using namespace arma;
 using namespace std;
+using namespace dynam_interaction_test;
 
 int main()
 {	
+	/*
 	vec3 a = vec3("0.0 0.0 0.0");
 	vec3 b = vec3("1.0 0.0 0.0");
 	vec3 c = vec3("0.5 0.5 0.0");
@@ -20,6 +23,25 @@ int main()
 
 	for each(float i in q) {
 		cout << i << endl;
+	}
+	*/
+
+	Sphere s0;
+	s0.c = vec3("0.0 0.0 0.0");
+	s0.r = 1.0f;
+
+	Sphere s1;
+	s1.c = vec3("2.6 0.0 0.0");
+	s1.r = 1.0f;
+
+	vec3 d = vec3("1.0 0.0 0.0");
+
+	float t = -1.0f;
+	if (TestMovingSphereSphere(s0, d, 0.0f, 1.0f, s1, t)) {
+		cout << "Sphere s0 intersects s1 at time t=" << t << endl;
+	}
+	else {
+		cout << "Sphere s0 does not intersect s1" << endl;
 	}
 
 	system("pause");

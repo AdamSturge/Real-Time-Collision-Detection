@@ -24,7 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="boundingvolumes.h">
+    <ClInclude Include="bounding_volumes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="Chapter 4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="boundingvolumes.cpp">
+    <ClCompile Include="bounding_volumes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

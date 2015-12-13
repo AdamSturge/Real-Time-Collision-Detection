@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <armadillo>
-#include "boundingvolumes.h"
+#include "bounding_volumes.h"
 
 
 using namespace arma;

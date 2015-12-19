@@ -5,43 +5,44 @@
 #include <iostream>
 #include "closest_point_computations.h"
 #include "dynamic_intersection_tests.h"
-#include <armadillo>
+#include "seperating_axis.h"
+#include <armadillo> 
 
 using namespace arma;
 using namespace std;
-using namespace dynam_interaction_test;
+
 
 int main()
 {	
-	/*
-	vec3 a = vec3("0.0 0.0 0.0");
-	vec3 b = vec3("1.0 0.0 0.0");
-	vec3 c = vec3("0.5 0.5 0.0");
-	vec3 p = vec3("3.21 4.23 6.77");
+	vector<vec2> V0 = vector<vec2>(3);
 
-	vec3 q = ClosestPointToTriangle(p, a, b, c);
+	vec2 p0 = vec2("3.5 0.0");
+	vec2 p1 = vec2("5.0 0.0");
+	vec2 p2 = vec2("4.5 1.0");
 
-	for each(float i in q) {
-		cout << i << endl;
-	}
-	*/
+	V0[0] = p0;
+	V0[1] = p1;
+	V0[2] = p2;
 
-	Sphere s0;
-	s0.c = vec3("0.0 0.0 0.0");
-	s0.r = 1.0f;
+	ConvexPolygon c0 = ConvexPolygon(V0);
 
-	Sphere s1;
-	s1.c = vec3("2.6 0.0 0.0");
-	s1.r = 1.0f;
+	vector<vec2> V1 = vector<vec2>(3);
 
-	vec3 d = vec3("1.0 0.0 0.0");
+	vec2 p3 = vec2("6.0 0.0");
+	vec2 p4 = vec2("7.0 0.0");
+	vec2 p5 = vec2("3.5 1.0");
 
-	float t = -1.0f;
-	if (TestMovingSphereSphere(s0, d, 0.0f, 1.0f, s1, t)) {
-		cout << "Sphere s0 intersects s1 at time t=" << t << endl;
+	V1[0] = p3;
+	V1[1] = p4;
+	V1[2] = p5;
+
+	ConvexPolygon c1 = ConvexPolygon(V1);
+
+	if (TestIntersection(c0, c1)) {
+		cout << "they intersect" << endl;
 	}
 	else {
-		cout << "Sphere s0 does not intersect s1" << endl;
+		cout << "they don't intersect" << endl;
 	}
 
 	system("pause");

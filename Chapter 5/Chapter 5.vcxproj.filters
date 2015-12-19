@@ -30,6 +30,9 @@
     <ClInclude Include="closest_point_computations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="seperating_axis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dynamic_intersection_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="seperating_axis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
